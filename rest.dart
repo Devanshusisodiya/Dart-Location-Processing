@@ -1,7 +1,12 @@
-import 'package:http/http.dart';
+import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 void main() {}
+
+void fetchData(name) async {
+  var url = Uri.parse('http://127.0.0.1:8000/test-list-singular/${name}/');
+  var response = await http.get(url);
+}
 
 class CoordinatesDecode {
   var latitude;
